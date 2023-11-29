@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.news_app.Ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_homeCategorizedFragment"
+            app:destination="@id/homeCategorizedFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_homSearchFragment"
+            app:destination="@id/homSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeCategorizedFragment"
+        android:name="com.example.news_app.Ui.HomeCategorizedFragment"
+        android:label="fragment_home_categorized2"
+        tools:layout="@layout/fragment_home_categorized2" >
+        <action
+            android:id="@+id/action_homeCategorizedFragment_to_homSearchFragment"
+            app:destination="@id/homSearchFragment" />
+        <action
+            android:id="@+id/action_homeCategorizedFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_homeCategorizedFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeCategorizedFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.news_app.Ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_self"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homSearchFragment"
+        android:name="com.example.news_app.Ui.HomSearchFragment"
+        android:label="fragment_hom_search"
+        tools:layout="@layout/fragment_hom_search" >
+        <action
+            android:id="@+id/action_homSearchFragment_to_homeCategorizedFragment"
+            app:destination="@id/homeCategorizedFragment" />
+        <action
+            android:id="@+id/action_homSearchFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.news_app.Ui.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <action
+            android:id="@+id/action_articleFragment_to_homeCategorizedFragment"
+            app:destination="@id/homeCategorizedFragment" />
+    </fragment>
+</navigation>

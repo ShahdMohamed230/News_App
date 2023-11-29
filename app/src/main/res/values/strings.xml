@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">News_app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pick_your_category_of_interest">Pick your category of interest</string>
+    <string name="settings_text_view_text">Language</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+</resources>

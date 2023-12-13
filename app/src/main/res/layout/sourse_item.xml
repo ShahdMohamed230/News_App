@@ -14,7 +14,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/source_item_border"
+        android:background="@drawable/source_style"
         android:padding="5dp"
         android:text="Sourse"
         android:textColor="#39A552"

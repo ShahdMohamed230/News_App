@@ -2,10 +2,10 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-
 android {
     namespace = "com.example.news_app"
     compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.news_app"

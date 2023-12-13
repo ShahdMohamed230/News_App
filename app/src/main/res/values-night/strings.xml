@@ -2,4 +2,6 @@
 <resources>
     <string name="pick_your_category_of_interest">Pick your category of interest</string>
     <string name="settings_text_view_text">Language</string>
+    <string name="categories">Categories</string>
+    <string name="settings">Settings</string>
 </resources>

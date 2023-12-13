@@ -24,12 +24,12 @@ class ArticleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         FragmentArticleBinding.bind(view)
-        binding.include.tvTitle.text=PostAdapter.title_article
-        binding.tvAuthor.text=PostAdapter.author
-        binding.tvDescription.text=PostAdapter.description_article
-        binding.tvDate.text=PostAdapter.time_article
-        binding.tvContent.text=PostAdapter.cotent
-        Glide.with(binding.root).asBitmap().load(Uri.parse(PostAdapter.image_article))
+        binding.include.tvTitle.text=PostAdapter.post.title
+        binding.tvAuthor.text=PostAdapter.post.author
+        binding.tvDescription.text=PostAdapter.post.description
+        binding.tvDate.text=PostAdapter.post.publishedAt
+        binding.tvContent.text=PostAdapter.post.content
+        Glide.with(binding.root).asBitmap().load(Uri.parse(PostAdapter.post.urlToImage))
             .placeholder(R.drawable.image).into(binding.imageView)
     }
 }

@@ -38,7 +38,7 @@ class HomeCategorizedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.include.tvTitle.text= CategoryAdapter.category.toString()
+        binding.include.tvTitle.text= CategoryAdapter.category
         navController = Navigation.findNavController(view)
         binding.navView.setupWithNavController(navController)
         lifecycleScope.launch {
@@ -56,8 +56,8 @@ class HomeCategorizedFragment : Fragment() {
 
             binding.navView.setNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
-                    R.id.nav_home -> navController.navigate(R.id.action_homeCategorizedFragment_to_homeFragment)
-                    R.id.nav_setting -> navController.navigate(R.id.action_homeCategorizedFragment_to_settingsFragment)
+                    R.id.homeFragment -> navController.navigate(R.id.action_homeCategorizedFragment_to_homeFragment)
+                    R.id.settingsFragment-> navController.navigate(R.id.action_homeCategorizedFragment_to_settingsFragment)
                 }
                 menuItem.isChecked = true
                 binding.drawerLayout.close()
@@ -69,7 +69,7 @@ class HomeCategorizedFragment : Fragment() {
         }
         lifecycleScope.launch {
             //sources
-            viewModel.sources(SourceAdapter.category).getSources()
+            viewModel.sources(CategoryAdapter.category).getSources()
                 .observe(viewLifecycleOwner, Observer { sources ->
                     if(sources.sources.size!=0) {
                         SourceAdapter.sourceId = sources.sources[0].id.toString()

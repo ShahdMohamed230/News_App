@@ -2,6 +2,7 @@ package com.example.news_app.Model
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.compose.ui.graphics.Color
 import androidx.recyclerview.widget.RecyclerView
 import com.example.news_app.databinding.SourseItemBinding
 
@@ -17,7 +18,7 @@ class SourceAdapter(private val list: List<SourceData>) :
 
     companion object {
         var sourceId=""
-        var category= CategoryAdapter.category
+        var sourceName=""
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = SourseItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -28,6 +29,7 @@ class SourceAdapter(private val list: List<SourceData>) :
         holder.source_name.text=list[position].name
         holder.itemView.setOnClickListener {
             sourceId =list[position].id.toString()
+            sourceName=list[position].name.toString()
             holder.itemView.setOnClickListener {
                     onClickListener.onClick(position,list[position])
             }
